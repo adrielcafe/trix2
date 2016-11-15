@@ -12,7 +12,7 @@ import org.springframework.context.annotation.Lazy;
 
 @Configuration
 @Lazy
-@ComponentScan(basePackages = { "io.mangue.services", "io.mangue.actors"})
+@ComponentScan(basePackages = { "trix2.services", "trix2.actors"})
 public class AkkaConfig {
     // The application context is needed to initialize the Akka Spring
     // Extension

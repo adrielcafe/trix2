@@ -1,4 +1,4 @@
-//package io.mangue.aspect;
+//package trix2.aspect;
 //
 //import co.xarx.trix.annotation.IntegrationTestBean;
 //import co.xarx.trix.config.multitenancy.TenantContextHolder;

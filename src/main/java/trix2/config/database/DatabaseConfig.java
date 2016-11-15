@@ -1,6 +1,7 @@
 package trix2.config.database;
 
 import com.zaxxer.hikari.HikariDataSource;
+import org.springframework.context.annotation.Primary;
 import trix2.config.flyway.FlywayIntegrator;
 import trix2.config.multitenance.MultiTenantHibernatePersistence;
 import org.springframework.beans.factory.annotation.Value;
@@ -23,7 +24,7 @@ import java.util.Properties;
 @EnableTransactionManagement
 @EnableJpaAuditing(dateTimeProviderRef = "dateTimeProvider")
 @EnableJpaRepositories(
-		basePackages = {"io.mangue"}
+		basePackages = {"trix2"}
 		,repositoryFactoryBeanClass = RepositoryFactoryBean.class
 )
 public class DatabaseConfig {
@@ -36,6 +37,7 @@ public class DatabaseConfig {
 	private String password;
 
 	@Bean
+	@Primary
 	public DataSource dataSource() {
 		HikariDataSource ds = new HikariDataSource();
 		ds.setDriverClassName("com.mysql.jdbc.Driver");
@@ -66,7 +68,7 @@ public class DatabaseConfig {
 		factory.setPersistenceUnitName("mangue");
 		factory.setPersistenceProviderClass(MultiTenantHibernatePersistence.class);
 		factory.setJpaVendorAdapter(vendorAdapter);
-		factory.setPackagesToScan("io.mangue.models", "org.javers.spring.model");
+		factory.setPackagesToScan("trix2.models", "org.javers.spring.model");
 		factory.setJpaProperties(hibernateProperties());
 		factory.afterPropertiesSet();
 

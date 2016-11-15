@@ -1,4 +1,4 @@
-package trix2.exception.chat;
+package trix2.exceptions.chat;
 
 /**
  * 

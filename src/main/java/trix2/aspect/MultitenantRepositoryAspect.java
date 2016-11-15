@@ -1,4 +1,4 @@
-package trix2.aspect;//package io.mangue.aspect;
+package trix2.aspect;//package trix2.aspect;
 //
 //import org.aspectj.lang.annotation.Aspect;
 //import org.aspectj.lang.annotation.Before;

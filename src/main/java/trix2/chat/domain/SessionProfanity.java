@@ -1,6 +1,6 @@
 package trix2.chat.domain;
 
-import trix2.exception.chat.TooMuchProfanityException;
+import trix2.exceptions.chat.TooMuchProfanityException;
 
 import java.util.concurrent.atomic.AtomicLong;
 

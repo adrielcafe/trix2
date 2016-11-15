@@ -1,4 +1,4 @@
-//package io.mangue.aspect;
+//package trix2.aspect;
 //
 //import com.google.common.collect.Sets;
 //import org.apache.log4j.Logger;

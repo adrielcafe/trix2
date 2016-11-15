@@ -14,7 +14,7 @@
 // * limitations under the License.
 // */
 //
-//package io.mangue.config;
+//package trix2.config;
 //
 //import com.datastax.driver.core.Cluster;
 //import org.springframework.beans.factory.BeanFactory;

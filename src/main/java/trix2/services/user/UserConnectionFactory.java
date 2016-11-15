@@ -1,4 +1,4 @@
-//package io.mangue.services.user;
+//package trix2.services.user;
 //
 //import co.xarx.trix.domain.User;
 //import co.xarx.trix.domain.UserConnection;

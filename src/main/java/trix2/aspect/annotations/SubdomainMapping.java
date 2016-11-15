@@ -1,4 +1,4 @@
-//package io.mangue.aspect.annotations;
+//package trix2.aspect.annotations;
 //
 //import SubdomainTypes;
 //

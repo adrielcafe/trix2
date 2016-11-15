@@ -14,7 +14,7 @@ public class RestDataConfig  extends RepositoryRestConfigurerAdapter {
     @Override
     public void configureRepositoryRestConfiguration(RepositoryRestConfiguration config) {
         super.configureRepositoryRestConfiguration(config);
-        Reflections reflections = new Reflections("io.mangue.models");
+        Reflections reflections = new Reflections("trix2.models");
         Set<Class<?>> entities = reflections.getTypesAnnotatedWith(Document.class);
         config.exposeIdsFor(entities.toArray(new Class<?>[0]));
         config.setBasePath("/data");
