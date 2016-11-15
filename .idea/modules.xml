@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/mangue.iml" filepath="$PROJECT_DIR$/mangue.iml" />
+      <module fileurl="file://$PROJECT_DIR$/trix2.iml" filepath="$PROJECT_DIR$/trix2.iml" />
     </modules>
   </component>
 </project>

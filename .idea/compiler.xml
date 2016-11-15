@@ -23,10 +23,12 @@
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
         <module name="mangue" />
+        <module name="trix2" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="mangue" target="1.8" />
+      <module name="trix2" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
