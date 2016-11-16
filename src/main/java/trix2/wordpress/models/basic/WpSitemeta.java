@@ -1,4 +1,4 @@
-package trix2.wordpress.models;
+package trix2.wordpress.models.basic;
 
 import javax.persistence.*;
 
@@ -6,10 +6,10 @@ import javax.persistence.*;
  * Created by misael on 11/15/2016.
  */
 @Entity
-@Table(name = "wp_postmeta", schema = "multiwp", catalog = "")
-public class WpPostmeta {
+@Table(name = "wp_sitemeta", schema = "multiwp", catalog = "")
+public class WpSitemeta {
 	private Long metaId;
-	private Long postId;
+	private Long siteId;
 	private String metaKey;
 	private String metaValue;
 
@@ -24,13 +24,13 @@ public class WpPostmeta {
 	}
 
 	@Basic
-	@Column(name = "post_id", nullable = false)
-	public Long getPostId() {
-		return postId;
+	@Column(name = "site_id", nullable = false)
+	public Long getSiteId() {
+		return siteId;
 	}
 
-	public void setPostId(Long postId) {
-		this.postId = postId;
+	public void setSiteId(Long siteId) {
+		this.siteId = siteId;
 	}
 
 	@Basic
@@ -58,10 +58,10 @@ public class WpPostmeta {
 		if (this == o) return true;
 		if (o == null || getClass() != o.getClass()) return false;
 
-		WpPostmeta that = (WpPostmeta) o;
+		WpSitemeta that = (WpSitemeta) o;
 
 		if (metaId != null ? !metaId.equals(that.metaId) : that.metaId != null) return false;
-		if (postId != null ? !postId.equals(that.postId) : that.postId != null) return false;
+		if (siteId != null ? !siteId.equals(that.siteId) : that.siteId != null) return false;
 		if (metaKey != null ? !metaKey.equals(that.metaKey) : that.metaKey != null) return false;
 		if (metaValue != null ? !metaValue.equals(that.metaValue) : that.metaValue != null) return false;
 
@@ -71,7 +71,7 @@ public class WpPostmeta {
 	@Override
 	public int hashCode() {
 		int result = metaId != null ? metaId.hashCode() : 0;
-		result = 31 * result + (postId != null ? postId.hashCode() : 0);
+		result = 31 * result + (siteId != null ? siteId.hashCode() : 0);
 		result = 31 * result + (metaKey != null ? metaKey.hashCode() : 0);
 		result = 31 * result + (metaValue != null ? metaValue.hashCode() : 0);
 		return result;

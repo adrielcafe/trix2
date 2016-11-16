@@ -1,4 +1,4 @@
-package trix2.wordpress.models;
+package trix2.wordpress.models.basic;
 
 import javax.persistence.*;
 
@@ -6,31 +6,31 @@ import javax.persistence.*;
  * Created by misael on 11/15/2016.
  */
 @Entity
-@Table(name = "wp_usermeta", schema = "multiwp", catalog = "")
-public class WpUsermeta {
-	private Long umetaId;
-	private Long userId;
+@Table(name = "wp_termmeta", schema = "multiwp", catalog = "")
+public class WpTermmeta {
+	private Long metaId;
+	private Long termId;
 	private String metaKey;
 	private String metaValue;
 
 	@Id
-	@Column(name = "umeta_id", nullable = false)
-	public Long getUmetaId() {
-		return umetaId;
+	@Column(name = "meta_id", nullable = false)
+	public Long getMetaId() {
+		return metaId;
 	}
 
-	public void setUmetaId(Long umetaId) {
-		this.umetaId = umetaId;
+	public void setMetaId(Long metaId) {
+		this.metaId = metaId;
 	}
 
 	@Basic
-	@Column(name = "user_id", nullable = false)
-	public Long getUserId() {
-		return userId;
+	@Column(name = "term_id", nullable = false)
+	public Long getTermId() {
+		return termId;
 	}
 
-	public void setUserId(Long userId) {
-		this.userId = userId;
+	public void setTermId(Long termId) {
+		this.termId = termId;
 	}
 
 	@Basic
@@ -58,10 +58,10 @@ public class WpUsermeta {
 		if (this == o) return true;
 		if (o == null || getClass() != o.getClass()) return false;
 
-		WpUsermeta that = (WpUsermeta) o;
+		WpTermmeta that = (WpTermmeta) o;
 
-		if (umetaId != null ? !umetaId.equals(that.umetaId) : that.umetaId != null) return false;
-		if (userId != null ? !userId.equals(that.userId) : that.userId != null) return false;
+		if (metaId != null ? !metaId.equals(that.metaId) : that.metaId != null) return false;
+		if (termId != null ? !termId.equals(that.termId) : that.termId != null) return false;
 		if (metaKey != null ? !metaKey.equals(that.metaKey) : that.metaKey != null) return false;
 		if (metaValue != null ? !metaValue.equals(that.metaValue) : that.metaValue != null) return false;
 
@@ -70,8 +70,8 @@ public class WpUsermeta {
 
 	@Override
 	public int hashCode() {
-		int result = umetaId != null ? umetaId.hashCode() : 0;
-		result = 31 * result + (userId != null ? userId.hashCode() : 0);
+		int result = metaId != null ? metaId.hashCode() : 0;
+		result = 31 * result + (termId != null ? termId.hashCode() : 0);
 		result = 31 * result + (metaKey != null ? metaKey.hashCode() : 0);
 		result = 31 * result + (metaValue != null ? metaValue.hashCode() : 0);
 		return result;

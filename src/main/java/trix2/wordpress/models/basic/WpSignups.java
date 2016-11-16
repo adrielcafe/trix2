@@ -1,4 +1,4 @@
-package trix2.wordpress.models;
+package trix2.wordpress.models.basic;
 
 import javax.persistence.*;
 import java.sql.Timestamp;

@@ -2,40 +2,34 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cd759a2f-c99f-49b4-86c8-83e181e1f667" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/trix2/wordpress/models/WpBlogVersions.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/trix2/wordpress/models/WpBlogs.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/trix2/wordpress/models/WpBpActivity.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/trix2/wordpress/models/WpBpActivityMeta.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/trix2/wordpress/models/WpBpNotifications.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/trix2/wordpress/models/WpBpNotificationsMeta.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/trix2/wordpress/models/WpBpXprofileData.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/trix2/wordpress/models/WpBpXprofileFields.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/trix2/wordpress/models/WpBpXprofileGroups.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/trix2/wordpress/models/WpBpXprofileMeta.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/trix2/wordpress/models/WpCommentmeta.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/trix2/wordpress/models/WpComments.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/trix2/wordpress/models/WpLinks.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/trix2/wordpress/models/WpOptions.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/trix2/wordpress/models/WpPostmeta.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/trix2/wordpress/models/WpPosts.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/trix2/wordpress/models/WpRegistrationLog.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/trix2/wordpress/models/WpSignups.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/trix2/wordpress/models/WpSite.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/trix2/wordpress/models/WpSitemeta.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/trix2/wordpress/models/WpTermRelationships.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/trix2/wordpress/models/WpTermRelationshipsPK.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/trix2/wordpress/models/WpTermTaxonomy.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/trix2/wordpress/models/WpTermmeta.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/trix2/wordpress/models/WpTerms.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/trix2/wordpress/models/WpUsermeta.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/trix2/wordpress/models/WpUsers.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/kotlin/models.kt" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/trix2/config/database/DatabaseConfig.java" afterPath="$PROJECT_DIR$/src/main/java/trix2/config/database/DatabaseConfig.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/trix2/wordpress/models/Post.java" afterPath="$PROJECT_DIR$/src/main/java/trix2/wordpress/models/Post.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/trix2/wordpress/models/PostMeta.java" afterPath="$PROJECT_DIR$/src/main/java/trix2/wordpress/models/PostMeta.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/trix2/wordpress/models/UserMeta.java" afterPath="$PROJECT_DIR$/src/main/java/trix2/wordpress/models/UserMeta.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/jooq-codegen.xml" afterPath="$PROJECT_DIR$/src/main/resources/jooq-codegen.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/trix2/wordpress/models/WpBlogVersions.java" afterPath="$PROJECT_DIR$/src/main/java/trix2/wordpress/models/basic/WpBlogVersions.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/trix2/wordpress/models/WpBlogs.java" afterPath="$PROJECT_DIR$/src/main/java/trix2/wordpress/models/basic/WpBlogs.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/trix2/wordpress/models/WpBpActivity.java" afterPath="$PROJECT_DIR$/src/main/java/trix2/wordpress/models/basic/WpBpActivity.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/trix2/wordpress/models/WpBpActivityMeta.java" afterPath="$PROJECT_DIR$/src/main/java/trix2/wordpress/models/basic/WpBpActivityMeta.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/trix2/wordpress/models/WpBpNotifications.java" afterPath="$PROJECT_DIR$/src/main/java/trix2/wordpress/models/basic/WpBpNotifications.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/trix2/wordpress/models/WpBpNotificationsMeta.java" afterPath="$PROJECT_DIR$/src/main/java/trix2/wordpress/models/basic/WpBpNotificationsMeta.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/trix2/wordpress/models/WpBpXprofileData.java" afterPath="$PROJECT_DIR$/src/main/java/trix2/wordpress/models/basic/WpBpXprofileData.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/trix2/wordpress/models/WpBpXprofileFields.java" afterPath="$PROJECT_DIR$/src/main/java/trix2/wordpress/models/basic/WpBpXprofileFields.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/trix2/wordpress/models/WpBpXprofileGroups.java" afterPath="$PROJECT_DIR$/src/main/java/trix2/wordpress/models/basic/WpBpXprofileGroups.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/trix2/wordpress/models/WpBpXprofileMeta.java" afterPath="$PROJECT_DIR$/src/main/java/trix2/wordpress/models/basic/WpBpXprofileMeta.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/trix2/wordpress/models/WpCommentmeta.java" afterPath="$PROJECT_DIR$/src/main/java/trix2/wordpress/models/basic/WpCommentmeta.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/trix2/wordpress/models/WpComments.java" afterPath="$PROJECT_DIR$/src/main/java/trix2/wordpress/models/basic/WpComments.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/trix2/wordpress/models/WpLinks.java" afterPath="$PROJECT_DIR$/src/main/java/trix2/wordpress/models/basic/WpLinks.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/trix2/wordpress/models/WpOptions.java" afterPath="$PROJECT_DIR$/src/main/java/trix2/wordpress/models/basic/WpOptions.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/trix2/wordpress/models/WpPostmeta.java" afterPath="$PROJECT_DIR$/src/main/java/trix2/wordpress/models/basic/WpPostmeta.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/trix2/wordpress/models/WpPosts.java" afterPath="$PROJECT_DIR$/src/main/java/trix2/wordpress/models/basic/WpPosts.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/trix2/wordpress/models/WpRegistrationLog.java" afterPath="$PROJECT_DIR$/src/main/java/trix2/wordpress/models/basic/WpRegistrationLog.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/trix2/wordpress/models/WpSignups.java" afterPath="$PROJECT_DIR$/src/main/java/trix2/wordpress/models/basic/WpSignups.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/trix2/wordpress/models/WpSite.java" afterPath="$PROJECT_DIR$/src/main/java/trix2/wordpress/models/basic/WpSite.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/trix2/wordpress/models/WpSitemeta.java" afterPath="$PROJECT_DIR$/src/main/java/trix2/wordpress/models/basic/WpSitemeta.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/trix2/wordpress/models/WpTermRelationships.java" afterPath="$PROJECT_DIR$/src/main/java/trix2/wordpress/models/basic/WpTermRelationships.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/trix2/wordpress/models/WpTermRelationshipsPK.java" afterPath="$PROJECT_DIR$/src/main/java/trix2/wordpress/models/basic/WpTermRelationshipsPK.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/trix2/wordpress/models/WpTermTaxonomy.java" afterPath="$PROJECT_DIR$/src/main/java/trix2/wordpress/models/basic/WpTermTaxonomy.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/trix2/wordpress/models/WpTermmeta.java" afterPath="$PROJECT_DIR$/src/main/java/trix2/wordpress/models/basic/WpTermmeta.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/trix2/wordpress/models/WpTerms.java" afterPath="$PROJECT_DIR$/src/main/java/trix2/wordpress/models/basic/WpTerms.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/trix2/wordpress/models/WpUsermeta.java" afterPath="$PROJECT_DIR$/src/main/java/trix2/wordpress/models/basic/WpUsermeta.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/trix2/wordpress/models/WpUsers.java" afterPath="$PROJECT_DIR$/src/main/java/trix2/wordpress/models/basic/WpUsers.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/pojogen.xml" afterPath="$PROJECT_DIR$/src/main/resources/pojogen.xml" />
     </list>
     <ignored path="mangue.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -71,30 +65,98 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="WpPosts.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/trix2/wordpress/models/WpPosts.java">
+      <file leaf-file-name="WpBlogs.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/trix2/wordpress/models/basic/WpBlogs.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="10" column="22" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
+            <state relative-caret-position="0">
+              <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Post.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/trix2/wordpress/models/Post.java">
+      <file leaf-file-name="WpBlogVersions.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/trix2/wordpress/models/basic/WpBlogVersions.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="290">
-              <caret line="21" column="23" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="23" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="0">
+              <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WpSite.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/trix2/wordpress/models/WpSite.java">
+      <file leaf-file-name="WpBpActivity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/trix2/wordpress/models/basic/WpBpActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WpBpActivityMeta.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/trix2/wordpress/models/basic/WpBpActivityMeta.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WpBpNotifications.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/trix2/wordpress/models/basic/WpBpNotifications.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WpBpNotificationsMeta.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/trix2/wordpress/models/basic/WpBpNotificationsMeta.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WpBpXprofileData.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/trix2/wordpress/models/basic/WpBpXprofileData.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WpBpXprofileFields.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/trix2/wordpress/models/basic/WpBpXprofileFields.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WpBpXprofileGroups.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/trix2/wordpress/models/basic/WpBpXprofileGroups.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WpBpXprofileMeta.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/trix2/wordpress/models/basic/WpBpXprofileMeta.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="153">
               <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
@@ -163,6 +225,7 @@
         <option value="$PROJECT_DIR$/src/main/resources/pojogen.xml" />
         <option value="$PROJECT_DIR$/src/main/java/trix2/wordpress/models/WpBpXprofileMeta.java" />
         <option value="$PROJECT_DIR$/src/main/java/trix2/wordpress/models/Post.java" />
+        <option value="$PROJECT_DIR$/src/main/java/trix2/wordpress/models/basic/WpBpXprofileMeta.java" />
       </list>
     </option>
   </component>
@@ -856,16 +919,16 @@
       <workItem from="1479188203683" duration="4779000" />
       <workItem from="1479213425505" duration="14891000" />
       <workItem from="1479244967072" duration="2083000" />
-      <workItem from="1479247812213" duration="9618000" />
+      <workItem from="1479247812213" duration="9715000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31371000" />
+    <option name="totallyTimeSpent" value="31468000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -883,7 +946,7 @@
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24962178" sideWeight="0.50576603" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24962178" sideWeight="0.49423394" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24962178" sideWeight="0.49423394" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1225,87 +1288,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/trix2/wordpress/models/WpBlogs.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-9">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/trix2/wordpress/models/WpBlogVersions.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-9">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/trix2/wordpress/models/WpBpActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-9">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/trix2/wordpress/models/WpBpActivityMeta.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-9">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/trix2/wordpress/models/WpBpNotifications.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-9">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/trix2/wordpress/models/WpBpNotificationsMeta.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-9">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/trix2/wordpress/models/WpBpXprofileData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-9">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/trix2/wordpress/models/WpBpXprofileFields.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-9">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/trix2/wordpress/models/WpBpXprofileGroups.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-9">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/trix2/wordpress/models/WpBpXprofileMeta.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/trix2/wordpress/models/WpPosts.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/trix2/wordpress/models/basic/WpPosts.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="10" column="22" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
@@ -1323,7 +1306,87 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/trix2/wordpress/models/WpSite.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/trix2/wordpress/models/basic/WpSite.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/trix2/wordpress/models/basic/WpBlogs.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/trix2/wordpress/models/basic/WpBlogVersions.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/trix2/wordpress/models/basic/WpBpActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/trix2/wordpress/models/basic/WpBpActivityMeta.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/trix2/wordpress/models/basic/WpBpNotifications.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/trix2/wordpress/models/basic/WpBpNotificationsMeta.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/trix2/wordpress/models/basic/WpBpXprofileData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/trix2/wordpress/models/basic/WpBpXprofileFields.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/trix2/wordpress/models/basic/WpBpXprofileGroups.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/trix2/wordpress/models/basic/WpBpXprofileMeta.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
