@@ -65,7 +65,7 @@ public class DatabaseConfig {
 
 		LocalContainerEntityManagerFactoryBean factory = new LocalContainerEntityManagerFactoryBean();
 		factory.setDataSource(dataSource());
-		factory.setPersistenceUnitName("mangue");
+		factory.setPersistenceUnitName("trix2");
 		factory.setPersistenceProviderClass(MultiTenantHibernatePersistence.class);
 		factory.setJpaVendorAdapter(vendorAdapter);
 		factory.setPackagesToScan("trix2.models", "org.javers.spring.model");

@@ -3,7 +3,7 @@ package trix2.wordpress.models;
 import javax.persistence.*;
 
 @Table(name = "wp_usermeta", indexes = {
-		@Index(name = "usermeta_user_id", columnList = "user_id"),
+	@Index(name = "usermeta_user_id", columnList = "user_id"),
     @Index(name = "usermeta_meta_key", columnList = "meta_key")
 })
 public class UserMeta{
@@ -14,7 +14,6 @@ public class UserMeta{
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "user_id")
     User user = null;
-    // XXX wordpress는 FK에 null 대신 0를 넣고 수동 조인...
     //@Column(name = "user_id", nullable = false)
     // userId Long = 0,
     @Column(name = "meta_key", length = 255, nullable = true)

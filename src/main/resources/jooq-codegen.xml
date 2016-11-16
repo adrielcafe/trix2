@@ -3,7 +3,7 @@
   <!-- Configure the database connection here -->
   <jdbc>
     <driver>com.mysql.jdbc.Driver</driver>
-    <url>jdbc:mysql://dbinstance1:3306/wordpress</url>
+    <url>jdbc:mysql://dbinstance1:3306/multiwp</url>
     <user>trix</user>
     <password>trix</password>
     

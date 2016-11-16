@@ -17,9 +17,9 @@ public class Post{
 	@Column(name = "id")
 	Long id = 0l;
 
-//	@ManyToOne(fetch = FetchType.LAZY)
-//	@JoinColumn(name = "post_author")
-//	User author: = null;
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "post_author")
+	User author = null;
 
 	// XXX: wordpress는 FK에 null 대신 0를 넣고 수동 조인...
 	//@Column(name = "post_author", nullable = false)

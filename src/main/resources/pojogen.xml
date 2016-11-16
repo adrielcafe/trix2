@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+    "-//Hibernate/Hibernate Configuration DTD//EN"
+    "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="connection.url">jdbc:mysql://myserver.io:3306/multiwp</property>
+    <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+	  <mapping class="trix2.wordpress.models.WpBlogVersions"/>
+	  <mapping class="trix2.wordpress.models.WpBlogs"/>
+	  <mapping class="trix2.wordpress.models.WpBpActivity"/>
+	  <mapping class="trix2.wordpress.models.WpBpActivityMeta"/>
+	  <mapping class="trix2.wordpress.models.WpBpNotifications"/>
+	  <mapping class="trix2.wordpress.models.WpBpNotificationsMeta"/>
+	  <mapping class="trix2.wordpress.models.WpBpXprofileData"/>
+	  <mapping class="trix2.wordpress.models.WpBpXprofileFields"/>
+	  <mapping class="trix2.wordpress.models.WpBpXprofileGroups"/>
+	  <mapping class="trix2.wordpress.models.WpBpXprofileMeta"/>
+	  <mapping class="trix2.wordpress.models.WpCommentmeta"/>
+	  <mapping class="trix2.wordpress.models.WpComments"/>
+	  <mapping class="trix2.wordpress.models.WpLinks"/>
+	  <mapping class="trix2.wordpress.models.WpOptions"/>
+	  <mapping class="trix2.wordpress.models.WpPostmeta"/>
+	  <mapping class="trix2.wordpress.models.WpPosts"/>
+	  <mapping class="trix2.wordpress.models.WpRegistrationLog"/>
+	  <mapping class="trix2.wordpress.models.WpSignups"/>
+	  <mapping class="trix2.wordpress.models.WpSite"/>
+	  <mapping class="trix2.wordpress.models.WpSitemeta"/>
+	  <mapping class="trix2.wordpress.models.WpTermRelationships"/>
+	  <mapping class="trix2.wordpress.models.WpTermTaxonomy"/>
+	  <mapping class="trix2.wordpress.models.WpTermmeta"/>
+	  <mapping class="trix2.wordpress.models.WpTerms"/>
+	  <mapping class="trix2.wordpress.models.WpUsermeta"/>
+	  <mapping class="trix2.wordpress.models.WpUsers"/>
+	  <!-- DB schema will be updated if needed -->
+    <!-- <property name="hbm2ddl.auto">update</property> -->
+  </session-factory>
+</hibernate-configuration>

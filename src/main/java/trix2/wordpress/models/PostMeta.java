@@ -2,7 +2,7 @@ package trix2.wordpress.models;
 
 
 import javax.persistence.*;
-
+@Table(name = "wp_postmeta")
 public class PostMeta{
 	@Id
     @GeneratedValue
