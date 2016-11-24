@@ -5,7 +5,8 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
-@Table(name = "wp_users", indexes = {
+@Entity
+@Table(indexes = {
 		@Index(name = "user_login", columnList = "user_login"),
 		@Index(name = "user_nicename", columnList = "user_nicename")
 })

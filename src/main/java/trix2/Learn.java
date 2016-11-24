@@ -7,7 +7,7 @@ import java.util.List;
 /**
  * Created by misael on 11/6/2016.
  */
-public class Test {
+public class Learn {
 	public static void main(String args[] ) throws Exception {
 		ArrayList<Integer> list1 = new ArrayList<>();
 		ArrayList<Integer> list2 = new ArrayList<>();

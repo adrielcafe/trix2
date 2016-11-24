@@ -14,39 +14,39 @@ import javax.sql.DataSource;
 import java.io.IOException;
 import java.util.Properties;
 
-@Configuration
-@EnableScheduling
+//@Configuration
+//@EnableScheduling
 public class SchedulerConfig {
 
-	@Bean
-	public SchedulerFactoryBean quartzScheduler(DataSource dataSource,
-												PlatformTransactionManager transactionManager,
-												ApplicationContext applicationContext) {
-		SchedulerFactoryBean schedulerFactoryBean = new SchedulerFactoryBean();
-		schedulerFactoryBean.setQuartzProperties(quartzProperties());
-		schedulerFactoryBean.setDataSource(dataSource);
-		schedulerFactoryBean.setAutoStartup(true);
-		schedulerFactoryBean.setTransactionManager(transactionManager);
-		AutowiringSpringBeanJobFactory jobFactory = new AutowiringSpringBeanJobFactory();
-		jobFactory.setApplicationContext(applicationContext);
-		schedulerFactoryBean.setJobFactory(jobFactory);
-
-		return schedulerFactoryBean;
-	}
-
-	@Bean
-	public Properties quartzProperties() {
-		PropertiesFactoryBean propertiesFactoryBean = new PropertiesFactoryBean();
-		propertiesFactoryBean.setLocation(new ClassPathResource("quartz.properties"));
-		Properties properties;
-
-		try {
-			propertiesFactoryBean.afterPropertiesSet();
-			properties = propertiesFactoryBean.getObject();
-		} catch (IOException e) {
-			throw new RuntimeException("Unable to load quartz.properties", e);
-		}
-
-		return properties;
-	}
+//	@Bean
+//	public SchedulerFactoryBean quartzScheduler(DataSource dataSource,
+//												PlatformTransactionManager transactionManager,
+//												ApplicationContext applicationContext) {
+//		SchedulerFactoryBean schedulerFactoryBean = new SchedulerFactoryBean();
+//		schedulerFactoryBean.setQuartzProperties(quartzProperties());
+//		schedulerFactoryBean.setDataSource(dataSource);
+//		schedulerFactoryBean.setAutoStartup(true);
+//		schedulerFactoryBean.setTransactionManager(transactionManager);
+//		AutowiringSpringBeanJobFactory jobFactory = new AutowiringSpringBeanJobFactory();
+//		jobFactory.setApplicationContext(applicationContext);
+//		schedulerFactoryBean.setJobFactory(jobFactory);
+//
+//		return schedulerFactoryBean;
+//	}
+//
+//	@Bean
+//	public Properties quartzProperties() {
+//		PropertiesFactoryBean propertiesFactoryBean = new PropertiesFactoryBean();
+//		propertiesFactoryBean.setLocation(new ClassPathResource("quartz.properties"));
+//		Properties properties;
+//
+//		try {
+//			propertiesFactoryBean.afterPropertiesSet();
+//			properties = propertiesFactoryBean.getObject();
+//		} catch (IOException e) {
+//			throw new RuntimeException("Unable to load quartz.properties", e);
+//		}
+//
+//		return properties;
+//	}
 }

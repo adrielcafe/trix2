@@ -3,7 +3,7 @@
   <!-- Configure the database connection here -->
   <jdbc>
     <driver>com.mysql.jdbc.Driver</driver>
-    <url>jdbc:mysql://dbinstance1:3306/multiwp</url>
+    <url>jdbc:mysql://dbinstance1:3306/multiwp?zeroDateTimeBehavior=convertToNull</url>
     <user>trix</user>
     <password>trix</password>
     

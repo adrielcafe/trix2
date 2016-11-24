@@ -1,11 +1,12 @@
 package trix2.wordpress.models;
 
 import javax.persistence.*;
-import java.time.LocalDateTime;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
-@Table(name = "wp_posts", indexes = {
+@Entity
+@Table(indexes = {
 		@Index(name = "post_name", columnList = "post_name"),
 		@Index(name = "post_type_status_date_id", columnList = "post_type, post_status, post_date, id"),
 		@Index(name = "post_parent", columnList = "post_parent"),
@@ -17,18 +18,20 @@ public class Post{
 	@Column(name = "id")
 	Long id = 0l;
 
-	@ManyToOne(fetch = FetchType.LAZY)
+	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name = "post_author")
 	User author = null;
 
 	// XXX: wordpress는 FK에 null 대신 0를 넣고 수동 조인...
 	//@Column(name = "post_author", nullable = false)
 	//val authorId: Long = 0,
-	@Column(name = "post_date", nullable = false, columnDefinition = "DATETIME DEFAULT '0000-00-00 00:00:00'")
-	LocalDateTime date = LocalDateTime.MIN;
+	@Temporal(TemporalType.DATE)
+	@Column(name = "post_date", nullable = false)
+	Date date = null;
 
-	@Column(name = "post_date_gmt", nullable = false, columnDefinition = "DATETIME DEFAULT '0000-00-00 00:00:00'")
-	LocalDateTime dateGMT = LocalDateTime.MIN;
+	@Temporal(TemporalType.DATE)
+	@Column(name = "post_date_gmt", nullable = false)
+	Date dateGMT = null;
 
 	@Column(name = "post_content", nullable = false, columnDefinition = "LONGTEXT")
 	String content = "";
@@ -60,11 +63,13 @@ public class Post{
 	@Column(name = "pinged", nullable = false, columnDefinition = "TEXT")
 	String pinged = "";
 
-	@Column(name = "post_modified", nullable = false, columnDefinition = "DATETIME DEFAULT '0000-00-00 00:00:00'")
-	LocalDateTime modified = LocalDateTime.MIN;
+	@Temporal(TemporalType.DATE)
+	@Column(name = "post_modified", nullable = false)
+	Date modified = null;
 
-	@Column(name = "post_modified_gmt", nullable = false, columnDefinition = "DATETIME DEFAULT '0000-00-00 00:00:00'")
-	LocalDateTime modifiedGMT = LocalDateTime.MIN;
+	@Temporal(TemporalType.DATE)
+	@Column(name = "post_modified_gmt", nullable = false)
+	Date modifiedGMT = null;
 
 	@Column(name = "post_content_filtered", columnDefinition = "LONGTEXT")
 	String contentFiltered = "";

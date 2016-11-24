@@ -2,6 +2,7 @@ package trix2;
 
 import akka.actor.ActorRef;
 import akka.actor.ActorSystem;
+import org.springframework.context.annotation.ComponentScan;
 import trix2.config.akka.SpringExtension;
 import trix2.exceptions.ApplicationAsyncUncaughtExceptionHandler;
 import org.springframework.aop.interceptor.AsyncUncaughtExceptionHandler;
