@@ -1,7 +1,7 @@
 package trix2.models.custom;
 
-import trix2.models.User;
 import org.springframework.security.core.GrantedAuthority;
+import trix2.models.User;
 
 public class UserGrantedAuthority implements GrantedAuthority {
 

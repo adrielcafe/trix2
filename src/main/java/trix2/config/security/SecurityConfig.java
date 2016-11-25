@@ -1,6 +1,6 @@
 package trix2.config.security;
 
-import trix2.services.MangueAuthenticationProvider;
+import trix2.services.TrixAuthenticationProvider;
 import trix2.services.RestAuthenticationEntryPoint;
 import trix2.services.RestAuthenticationSuccessHandler;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,7 +24,7 @@ import org.springframework.security.web.authentication.SimpleUrlAuthenticationFa
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Autowired
-    private MangueAuthenticationProvider authenticationProvider;
+    private TrixAuthenticationProvider authenticationProvider;
 
     @Autowired
     private RestAuthenticationEntryPoint restAuthenticationEntryPoint;

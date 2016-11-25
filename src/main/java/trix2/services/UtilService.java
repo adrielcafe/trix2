@@ -1,7 +1,5 @@
 package trix2.services;
 
-import trix2.models.App;
-import trix2.models.User;
 import trix2.util.ProfileType;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.core.Authentication;
@@ -27,13 +25,13 @@ public class UtilService {
     @Value("${spring.profiles.active}")
     public String profile;
 
-    public App getAppFromHost(String subdomain){
-        // TODO implement db and cache to retreive
-        App app = new App();
-        app.name = "Admin";
-        app.subdomain = "admin";
-        return app;
-    }
+//    public App getAppFromHost(String subdomain){
+//        // TODO implement db and cache to retreive
+//        App app = new App();
+//        app.name = "Admin";
+//        app.subdomain = "admin";
+//        return app;
+//    }
 
     public ProfileType applicationProfile(){
         if(profile != null && profile.equals("prod"))
@@ -92,14 +90,14 @@ public class UtilService {
 		return !topDomain.equals(host) ? host.split("." + topDomain)[0] : null;
     }
 
-    public User getUser(){
-        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
-        Object object = null;
-        if (auth != null)
-            object = auth.getPrincipal();
-
-        if(object instanceof User)
-            return (User) object;
-        return null;
-    }
+//    public User getUser(){
+//        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+//        Object object = null;
+//        if (auth != null)
+//            object = auth.getPrincipal();
+//
+//        if(object instanceof User)
+//            return (User) object;
+//        return null;
+//    }
 }

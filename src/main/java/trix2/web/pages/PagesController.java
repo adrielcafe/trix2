@@ -3,7 +3,6 @@ package trix2.web.pages;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import trix2.dtos.SystemInfoDTO;
-import trix2.models.User;
 import trix2.services.UtilService;
 import trix2.util.ProfileType;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -37,15 +36,15 @@ public class PagesController {
 
 	@RequestMapping(value = "/" , method = RequestMethod.GET)
 	public ModelAndView home() throws JsonProcessingException {
-		User user = utilService.getUser();
+//		User user = utilService.getUser();
 
 		ModelAndView mav = new ModelAndView();
 
 		SystemInfoDTO systemInfoDTO = new SystemInfoDTO();
 		systemInfoDTO.domain = domain;
 
-		mav.addObject("user", user);
-		mav.addObject("userJson", user != null ? mapper.writeValueAsString(user) : "null");
+//		mav.addObject("user", user);
+//		mav.addObject("userJson", user != null ? mapper.writeValueAsString(user) : "null");
 		mav.addObject("systemInfoJson", mapper.writeValueAsString(systemInfoDTO));
 
 //		if(TenantContextHolder.getTenantSubdomain() == null) {

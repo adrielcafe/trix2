@@ -14,7 +14,7 @@ public final class Constants {
 		public static final User ANONYMOUS_USER = new User();
 
 		static {
-			ANONYMOUS_USER.username = "wordrails";
+			ANONYMOUS_USER.username = "trix";
 			ANONYMOUS_USER.addAuthority(new UserGrantedAuthority(ANONYMOUS_USER, "ROLE_ANONYMOUS"));
 		}
 

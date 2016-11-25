@@ -1,6 +1,5 @@
 package trix2.dtos;
 
-import trix2.models.App;
 import trix2.models.User;
 
 import java.io.Serializable;
@@ -11,5 +10,4 @@ import java.util.List;
  */
 public class UserConsoleDataDto implements Serializable{
     public User user;
-    public List<App> apps;
 }

@@ -4,17 +4,14 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
-import trix2.models.custom.UserGrantedAuthority;
-import trix2.models.security.PrincipalImpl;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.annotation.LastModifiedDate;
-import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
+import trix2.models.custom.UserGrantedAuthority;
 
 import java.io.Serializable;
-import java.security.acl.Acl;
 import java.util.Collection;
 import java.util.Date;
 import java.util.HashSet;
@@ -24,7 +21,6 @@ import java.util.Set;
  * Created by misael on 17/10/2015.
  */
 @JsonIgnoreProperties(value = {"accountNonExpired", "accountNonLocked", "credentialsNonExpired", "enabled"}) // remove UserDetails properties from json
-@Document
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class User implements UserDetails, Serializable{
 
@@ -39,27 +35,6 @@ public class User implements UserDetails, Serializable{
         this.id = id;
     }
 
-    @JsonIgnore
-    public PrincipalImpl principal;
-
-    public Acl acl;
-
-    public PrincipalImpl getPrincipal() {
-        return principal;
-    }
-
-    public void setPrincipal(PrincipalImpl principal) {
-        this.principal = principal;
-    }
-
-    public Acl getAcl() {
-        return acl;
-    }
-
-    public void setAcl(Acl acl) {
-        this.acl = acl;
-    }
-
     public String username;
     public String name;
 
@@ -68,8 +43,6 @@ public class User implements UserDetails, Serializable{
     }
 
     public void nullafy(){
-        setAcl(null);
-        setPrincipal(null);
     }
 
     @JsonIgnore

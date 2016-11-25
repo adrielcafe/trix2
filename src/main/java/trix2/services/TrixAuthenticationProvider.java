@@ -1,7 +1,5 @@
 package trix2.services;
 
-import trix2.models.User;
-import trix2.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationServiceException;
 import org.springframework.security.authentication.InternalAuthenticationServiceException;
@@ -12,15 +10,13 @@ import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Service;
+import trix2.models.User;
 
 @Service
-public class MangueAuthenticationProvider extends AbstractUserDetailsAuthenticationProvider {
+public class TrixAuthenticationProvider extends AbstractUserDetailsAuthenticationProvider {
 
     @Autowired
     private UtilService utilService;
-
-    @Autowired
-    private UserRepository userRepository;
 
     @Override
     protected void additionalAuthenticationChecks(UserDetails userDetails, UsernamePasswordAuthenticationToken authentication) throws AuthenticationException {
@@ -32,11 +28,11 @@ public class MangueAuthenticationProvider extends AbstractUserDetailsAuthenticat
 
 //        App app = utilService.getAppFromHost(request.getHeader("Host"));
 
-        try {
-            user = userRepository.findByUsername(username);
-        } catch (Exception repositoryProblem) {
-            throw new InternalAuthenticationServiceException(repositoryProblem.getMessage(), repositoryProblem);
-        }
+//        try {
+//            user = userRepository.findByUsername(username);
+//        } catch (Exception repositoryProblem) {
+//            throw new InternalAuthenticationServiceException(repositoryProblem.getMessage(), repositoryProblem);
+//        }
 
 //        if(!(user != null && user.appId != null && app != null && app.id.equals(user.appId)))
 //            throw new BadCredentialsException("User does not belong to app");

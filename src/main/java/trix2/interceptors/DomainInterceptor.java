@@ -1,7 +1,7 @@
 package trix2.interceptors;
 
 import trix2.config.multitenance.TenantContextHolder;
-import trix2.repositories.UserRepository;
+//import trix2.repositories.UserRepository;
 import trix2.services.UtilService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.servlet.ModelAndView;
@@ -12,8 +12,8 @@ import javax.servlet.http.HttpServletResponse;
 
 public class DomainInterceptor extends HandlerInterceptorAdapter {
 
-    @Autowired
-    private UserRepository userRepository;
+//    @Autowired
+//    private UserRepository userRepository;
 
     @Autowired
     private UtilService utilService;
