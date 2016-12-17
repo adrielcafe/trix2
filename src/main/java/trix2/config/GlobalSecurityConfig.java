@@ -1,5 +1,6 @@
 package trix2.config;
 
+import org.springframework.beans.factory.annotation.Qualifier;
 import trix2.config.security.BitMaskPermissionGrantingStrategy;
 import trix2.config.security.MultitenantAclConfig;
 import trix2.config.security.Permissions;

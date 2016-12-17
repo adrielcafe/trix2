@@ -21,8 +21,8 @@ import org.springframework.util.Assert;
 import trix2.config.database.DatabaseConfig;
 import trix2.wordpress.WordpressConfig;
 import trix2.wordpress.models.Post;
-import trix2.wordpress.tables.WpPosts;
-import trix2.wordpress.tables.WpUsers;
+//import trix2.wordpress.tables.WpPosts;
+//import trix2.wordpress.tables.WpUsers;
 
 import javax.sql.DataSource;
 import java.util.List;
@@ -54,8 +54,8 @@ public class WordpressLearn {
 		DSLContext dsl = DSL.using(dataSource, SQLDialect.MYSQL, settings);
 
 // Run queries with the "mapped" configuration
-		List<Post> posts = dsl.select().from(WpPosts.WP_POSTS).join(WpUsers.WP_USERS)
-				.on(WpPosts.WP_POSTS.POST_AUTHOR.equal(WpUsers.WP_USERS.ID)).fetchInto(Post.class);
-		Assert.notNull(posts);
+//		List<Post> posts = dsl.select().from(WpPosts.WP_POSTS).join(WpUsers.WP_USERS)
+//				.on(WpPosts.WP_POSTS.POST_AUTHOR.equal(WpUsers.WP_USERS.ID)).fetchInto(Post.class);
+//		Assert.notNull(posts);
 	}
 }
