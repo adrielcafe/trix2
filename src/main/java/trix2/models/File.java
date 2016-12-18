@@ -1,4 +1,4 @@
-package trix2.models.trix;
+package trix2.models;
 
 import lombok.AccessLevel;
 import lombok.Setter;

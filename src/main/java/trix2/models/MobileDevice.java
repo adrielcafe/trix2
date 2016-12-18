@@ -1,4 +1,4 @@
-package trix2.models.relational;
+package trix2.models;
 
 import trix2.models.custom.BaseEntity;
 import lombok.AccessLevel;

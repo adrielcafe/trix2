@@ -1,4 +1,4 @@
-package trix2.models.trix;
+package trix2.models;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;

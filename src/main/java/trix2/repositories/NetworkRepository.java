@@ -8,7 +8,7 @@ import org.springframework.data.querydsl.QueryDslPredicateExecutor;
 import org.springframework.data.repository.query.Param;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 import org.springframework.data.rest.core.annotation.RestResource;
-import trix2.models.trix.Network;
+import trix2.models.Network;
 
 import java.util.List;
 
