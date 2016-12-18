@@ -1,5 +1,7 @@
 package trix2.services;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import trix2.repositories.NetworkRepository;
 import trix2.util.ProfileType;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.core.Authentication;
@@ -24,6 +26,13 @@ public class UtilService {
 
     @Value("${spring.profiles.active}")
     public String profile;
+
+	public NetworkRepository networkRepository;
+
+	@Autowired
+	public UtilService(NetworkRepository networkRepository){
+		this.networkRepository = networkRepository;
+	}
 
 //    public App getAppFromHost(String subdomain){
 //        // TODO implement db and cache to retreive

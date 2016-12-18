@@ -1,14 +1,14 @@
 package trix2.config.database;
 
 import com.zaxxer.hikari.HikariDataSource;
-import org.springframework.context.annotation.Primary;
-import trix2.config.flyway.FlywayIntegrator;
-import trix2.config.multitenance.MultiTenantHibernatePersistence;
+import org.hibernate.MultiTenancyStrategy;
+import org.hibernate.cfg.Environment;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.beans.factory.config.FieldRetrievingFactoryBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.DependsOn;
+import org.springframework.context.annotation.Primary;
 import org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor;
 import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
@@ -16,15 +16,17 @@ import org.springframework.orm.jpa.JpaTransactionManager;
 import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
 import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
+import trix2.config.flyway.FlywayIntegrator;
 
 import javax.sql.DataSource;
+import java.util.Map;
 import java.util.Properties;
 
 @Configuration
 @EnableTransactionManagement
 @EnableJpaAuditing(dateTimeProviderRef = "dateTimeProvider")
 @EnableJpaRepositories(
-		basePackages = {"trix2"}
+		basePackages = {"trix2.repositories"}
 		,repositoryFactoryBeanClass = RepositoryFactoryBean.class
 )
 public class DatabaseConfig {
@@ -48,6 +50,10 @@ public class DatabaseConfig {
 		ds.addDataSourceProperty("prepStmtCacheSize", "300");
 		ds.addDataSourceProperty("prepStmtCacheSqlLimit", "2048");
 
+//		MultitenantRoutingDataSource multitenantDataSource = new MultitenantRoutingDataSource();
+//		multitenantDataSource.setDefaultTargetDataSource(ds);
+//		multitenantDataSource.setTargetDataSources(ds);
+//		return multitenantDataSource;
 		return ds;
 	}
 
@@ -57,19 +63,26 @@ public class DatabaseConfig {
 		return new FlywayIntegrator();
 	}
 
-	@Bean
+	@Bean(name="entityManagerFactory")
 	@DependsOn("flywayIntegrator")
-	public LocalContainerEntityManagerFactoryBean entityManagerFactory() {
+	public LocalContainerEntityManagerFactoryBean entityManagerFactory(CurrentTenantResolverImpl currentTenantResolverImpl, SchemaPerTenantConnectionProvider tenantIdentifierResolver) {
 		HibernateJpaVendorAdapter vendorAdapter = new HibernateJpaVendorAdapter();
 		vendorAdapter.setGenerateDdl(true);
 
 		LocalContainerEntityManagerFactoryBean factory = new LocalContainerEntityManagerFactoryBean();
 		factory.setDataSource(dataSource());
 		factory.setPersistenceUnitName("trix2");
-		factory.setPersistenceProviderClass(MultiTenantHibernatePersistence.class);
+//		factory.setPersistenceProviderClass(MultiTenantHibernatePersistence.class);
 		factory.setJpaVendorAdapter(vendorAdapter);
 		factory.setPackagesToScan("trix2.models", "org.javers.spring.model");
 		factory.setJpaProperties(hibernateProperties());
+
+		Map<String, Object> jpaProperties = new java.util.HashMap<>();
+		jpaProperties.put(Environment.MULTI_TENANT, MultiTenancyStrategy.SCHEMA);
+		jpaProperties.put(Environment.MULTI_TENANT_CONNECTION_PROVIDER, tenantIdentifierResolver);
+		jpaProperties.put(Environment.MULTI_TENANT_IDENTIFIER_RESOLVER, currentTenantResolverImpl);
+		factory.setJpaPropertyMap(jpaProperties);
+
 		factory.afterPropertiesSet();
 
 		return factory;
@@ -81,22 +94,25 @@ public class DatabaseConfig {
 //				setProperty("hibernate.hbm2ddl.auto", "update");
 				setProperty("hibernate.dialect", "org.hibernate.dialect.MySQL5Dialect");
 				setProperty("hibernate.globally_quoted_identifiers", "false");
-				setProperty("hibernate.show_sql", "false");
+				setProperty("hibernate.show_sql", "true");
 				setProperty("hibernate.format", "true");
 				setProperty("hibernate.current_session_context_class", "thread");
 				setProperty("hibernate.default_batch_fetch_size", "200");
 				setProperty("hibernate.classloading.use_current_tccl_as_parent", "false");
 				setProperty("hibernate.connection.characterEncoding", "utf8");
 				setProperty("hibernate.temp.use_jdbc_metadata_defaults", "false");
+//				setProperty("hibernate.multiTenancy", "SCHEMA");
+//				setProperty("hibernate.tenant_identifier_resolver", "trix2.config.database.CurrentTenantResolverImpl");
+//				setProperty("hibernate.multi_tenant_connection_provider", "trix2.config.database.SchemaPerTenantConnectionProvider");
 			}
 		};
 	}
 
 
 	@Bean
-	public JpaTransactionManager transactionManager(){
+	public JpaTransactionManager transactionManager(LocalContainerEntityManagerFactoryBean entityManagerFactory){
 		JpaTransactionManager jpaTransactionManager = new JpaTransactionManager();
-		jpaTransactionManager.setEntityManagerFactory(entityManagerFactory().getObject());
+		jpaTransactionManager.setEntityManagerFactory(entityManagerFactory.getObject());
 		return jpaTransactionManager;
 	}
 

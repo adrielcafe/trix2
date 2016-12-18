@@ -17,7 +17,7 @@ import trix2.models.User;
 public interface UserRepository extends JpaRepository<User, Integer>, QueryDslPredicateExecutor<User>{
 
 	@RestResource(exported = false)
-	@Cacheable(value = "user", key = "#p0")
+//	@Cacheable(value = "user", key = "#p0")
 	@Query("select user from User user where user.username = :username")
 	User findByUsername(@Param("username") String username);
 }
